@@ -1,20 +1,27 @@
 <template>
-  <BlockOne />
-  <BlockTwo />
-  <Menu />
-  <router-view />
+    <TheBureau/>
+    <TheMainImg/>
+    <TheHeader/>
+    <router-view />
 </template>
 
 <script>
-import BlockOne from "../components/BlockOne.vue";
-import BlockTwo from "../components/BlockTwo.vue";
-import Menu from "../components/Menu.vue";
-
+import TheContainer from '../components/TheContainer.vue'
+import TheBureau from '../views/TheBureau.vue'
+import TheMainImg from '../views/TheMainImg.vue'
+import TheHeader from '../views/TheHeader.vue'
 export default {
   components: {
-    BlockOne,
-    BlockTwo,
-    Menu,
+    TheContainer,
+    TheBureau,
+    TheMainImg,
+    TheHeader
   },
 };
 </script>
+<style >
+  .wrapper{
+    overflow: hidden;
+    min-height: 100%;
+  }
+</style>

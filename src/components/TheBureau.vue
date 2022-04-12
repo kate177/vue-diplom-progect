@@ -1,21 +1,21 @@
 <template>
     <section class="bureau">
-        <TheContainer>
+        <Container>
             <div class="bureau-body">
                 <div class="bureau-img">
                     <img src="../assets/img/logo.png" alt="">
                 </div>
                 <div class="bureau-name">бюро стандартизации и метрологии</div>
             </div>
-        </TheContainer>
+        </Container>
     </section>
 </template>
 
 <script>
-import TheContainer from '../components/TheContainer.vue'
+import Container from './Container.vue'
     export default {
         components:{
-            TheContainer
+            Container
         }
     }
 </script>
@@ -42,6 +42,7 @@ import TheContainer from '../components/TheContainer.vue'
             font-size: 23px;
             line-height: 27px;
             margin-left: 20px;
+            color: #040844;
             flex: 1 1 auto;
             @media(max-width:500px){
                 font-size: 16px;

@@ -28,5 +28,11 @@
             width: 100%;
             height: 100%;
         }
+        @media(max-width:500px){
+            padding: 0 0 25% 0;
+            & img{
+                object-position: left;
+            }
+        }
     }
 </style>

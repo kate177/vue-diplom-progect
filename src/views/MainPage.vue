@@ -1,27 +1,37 @@
 <template>
-    <TheBureau/>
-    <TheMainImg/>
-    <TheHeader/>
-    <router-view />
+    <div class="wrapper" :class="isTouch ? 'touch' : 'pc' ">
+      <TheBureau/>
+      <TheMainImg/>
+      <TheHeader v-scrolto/>
+      <router-view />
+    </div>
 </template>
 
 <script>
-import TheContainer from '../components/TheContainer.vue'
-import TheBureau from '../views/TheBureau.vue'
-import TheMainImg from '../views/TheMainImg.vue'
-import TheHeader from '../views/TheHeader.vue'
+import Container from '../components/Container.vue'
+import TheBureau from '../components/TheBureau.vue'
+import TheMainImg from '../components/TheMainImg.vue'
+import TheHeader from '../components/TheHeader.vue'
+import TheInfo from './TheInfo.vue'
+import wtatUse from '../helpers/wtatUse'
 export default {
   components: {
-    TheContainer,
+    Container,
     TheBureau,
     TheMainImg,
-    TheHeader
+    TheHeader,
+    TheInfo
+  },
+  computed:{
+    isTouch(){
+      return wtatUse()
+    }
   },
 };
 </script>
 <style >
   .wrapper{
     overflow: hidden;
-    min-height: 100%;
+    min-height: 100vh;
   }
 </style>

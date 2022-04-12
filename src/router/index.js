@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
@@ -11,12 +11,28 @@ const routes = [
         name: "quality_management",
         component: () => import("../views/About.vue"),
       },
+      {
+        path: "/theInfo",
+        alias:'/',
+        name: "theInfo",
+        component: () => import("../views/TheInfo.vue"),
+      },
+      {
+        path: "/collaborator",
+        name: "collaborator",
+        component: () => import("../views/Collaborator.vue"),
+      },
+      {
+        path: "/segment_direction",
+        name: "segment_direction",
+        component: () => import("../views/Direction.vue"),
+      },
     ],
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   linkActiveClass: "active-link",
 });
